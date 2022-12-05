@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+}
+
+group = 'net.kettlemc.gehirnfick'
+version = '1.0.0'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+jar {
+	manifest {
+		attributes 'Implementation-Title': project.name,
+				'Implementation-Version': version,
+				'Main-Class': 'net.kettlemc.gehirnfick.Main'
+	}
+}
+
+dependencies {
+	testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+}
